@@ -1,0 +1,11 @@
+/* src/App.css */
+:root {
+  --main-color: #333333;
+  --brand-color: #0066cc;
+  --secondary-color: #ff9900;
+  --background-color: #ffffff;
+  --border-color: #cccccc;
+  --muted-text-color: #666666;
+  --hover-shadow: rgba(0, 0, 0, 0.1);
+  --default-shadow: rgba(0, 0, 0, 0.05);
+}

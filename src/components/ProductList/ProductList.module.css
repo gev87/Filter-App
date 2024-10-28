@@ -1,0 +1,11 @@
+/* src/components/ProductList.module.css */
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.noProducts {
+  font-size: 1.2em;
+  color: #888;
+}

@@ -1,0 +1,25 @@
+/* src/App.module.css */
+.app {
+  display: flex;
+}
+
+.toggleButton {
+  display: none; /* Visible on small screens */
+}
+
+.productList {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .toggleButton {
+    display: block;
+    margin: 16px;
+  }
+}

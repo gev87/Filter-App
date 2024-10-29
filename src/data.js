@@ -1,4 +1,4 @@
-export const products = [
+export const PRODUCTS = [
 	{
 		id: 1,
 		name: "Wireless Headphones",
@@ -15,7 +15,7 @@ export const products = [
 		category: "Electronics",
 		brand: "Brand B",
 		price: 49.99,
-		rating: 4.0,
+		rating: 2.0,
 		imageUrl:
 			"https://images.unsplash.com/photo-1675319245480-215961c129f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
@@ -50,3 +50,17 @@ export const products = [
 			"https://plus.unsplash.com/premium_photo-1661313817350-1fa759c43a3b?q=80&w=2117&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
 ];
+
+
+	// Define initial filter values
+	export const INITIAL_FILTERS = {
+		category: "",
+		brand: "",
+		priceRange: 1000,
+		rating: 0,
+		sortBy: "",
+	};
+
+	// Extract unique categories and brands from the product data
+	export const CATEGORIES = [...new Set(PRODUCTS.map((product) => product.category))];
+	export const BRANDS = [...new Set(PRODUCTS.map((product) => product.brand))];

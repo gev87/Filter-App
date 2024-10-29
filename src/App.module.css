@@ -1,48 +1,47 @@
 /* src/App.module.css */
 .app {
-	display: flex;
-  width:100%;
+  display: flex;
+  width: 100vw;
   overflow-x: hidden;
 }
 
 .toggleButton {
-	display: none;
-	margin: 16px;
-	padding: 8px 16px;
-	font-size: 1em;
-	background-color: var(--brand-color);
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+  display: none;
+  margin: 16px;
+  padding: 8px 16px;
+  font-size: 1em;
+  background-color: var(--brand-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .toggleButton:hover {
-	background-color: #005bb5;
+  background-color: #005bb5;
 }
 
 .productList {
-	flex-grow: 1;
-	padding: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 30px;
 }
 
-
 @media (max-width: 800px) {
-	.app {
-		flex-direction: column;
-	}
+  .app {
+    flex-direction: column;
+  }
 
-	.toggleButton {
-		display: block;
+  .toggleButton {
+    display: block;
     overflow-x: hidden;
-	}
+  }
 
-	.productList {
-		padding: 10px;
-		width: 100%;
-	}
+  .productList {
+    padding: 10px;
+    width: 100%;
+  }
 }

@@ -1,72 +1,74 @@
 /* src/components/ProductCard.module.css */
 .productCard {
-	background-color: var(--background-color);
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	overflow: hidden;
-	width: 100%;
-	max-width: 250px;
-	margin: 16px auto;
-	box-shadow: 0 2px 4px var(--default-shadow);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	display: flex;
-	flex-direction: column;
-	padding: 20px; /* Added padding */
-	height: fit-content;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 250px;
+  margin: 16px auto;
+  box-shadow: 0 2px 4px var(--default-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Added padding */
+  height: fit-content;
 }
 
 .productCard:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 4px 8px var(--hover-shadow);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px var(--hover-shadow);
 }
 
 .productImage {
-	width: 100%;
-	height: 150px;
-	object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
 }
 
 .productName {
-	font-size: 1.1em;
-	font-weight: 600;
-	margin-bottom: 8px;
-	color: var(--main-color);
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--main-color);
 }
 
 .productCategory,
 .productBrand,
 .productPrice,
 .productRating {
-	font-size: 0.9em;
-	color: var(--muted-text-color);
-	margin-bottom: 4px;
+  font-size: 0.9em;
+  color: var(--muted-text-color);
+  margin-bottom: 4px;
 }
 
 .productPrice {
-	color: var(--brand-color); /* Using brand color */
-	font-weight: 700;
-	margin-top: auto;
+  color: var(--brand-color); /* Using brand color */
+  font-weight: 700;
+  margin-top: auto;
 }
 
 .productRating {
-	color: var(--secondary-color); /* Using secondary color */
+  color: var(--secondary-color); /* Using secondary color */
 }
 
 .productPrice svg,
 .productRating svg {
-	color: inherit;
-	margin-bottom: -1px;
+  color: inherit;
+  margin-bottom: -1px;
 }
 
 @media (max-width: 800px) {
-	.productCard {
-		margin-right: auto;
-	}
+  .productCard {
+    margin-right: auto;
+  }
 }
 
-@media (max-width: 550px) {
-	.productCard {
-		max-width: 100%;
-		margin-right: 36px;
-	}
+@media (max-width: 600px), (min-width: 801px) and (max-width: 888px) {
+  .productCard {
+    max-width: 100%;
+    margin-right: 36px;
+  }
+  .productCard img {
+    height: auto;
+  }
 }

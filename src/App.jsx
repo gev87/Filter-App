@@ -2,30 +2,19 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./App.css"; // Import global CSS variables
 import styles from "./App.module.css"; // Import CSS module for App component
-import { products as mockProducts } from "./data"; // Import mock data
+import { BRANDS, CATEGORIES, INITIAL_FILTERS, PRODUCTS } from "./data"; // Import mock data
 import ProductList from "./components/ProductList"; // Product list component
 import FilterPanel from "./components/FilterPanel"; // Filter panel component
 import Spinner from "./components/Spinner"; // Spinner component
 import useDebounce from "./hooks/useDebounce"; // Custom debounce hook
 
-	// Define initial filter values
-	const initialFilters = {
-		category: "",
-		brand: "",
-		priceRange: 1000,
-		rating: 0,
-		sortBy: "",
-	};
 
-	// Extract unique categories and brands from the product data
-	const categories = [...new Set(mockProducts.map((product) => product.category))];
-	const brands = [...new Set(mockProducts.map((product) => product.brand))];
 
 const App = () => {
 	// State for filters, loaded from localStorage if available
 	const [filters, setFilters] = useState(() => {
 		const savedFilters = localStorage.getItem("filters");
-		return savedFilters ? JSON.parse(savedFilters) : initialFilters;
+		return savedFilters ? JSON.parse(savedFilters) : INITIAL_FILTERS;
 	});
 
 	// State to control the visibility of the filter panel
@@ -37,11 +26,10 @@ const App = () => {
 	// Debounce the filters to prevent unnecessary re-renders
 	const debouncedFilters = useDebounce(filters,500);
 	
-	console.log("debouncedFilters", debouncedFilters);
 
 	// Apply filters and sorting logic
 	const filteredProducts = useMemo(() => {
-		let updatedProducts = [...mockProducts];
+		let updatedProducts = [...PRODUCTS];
 
 		// Filter by category
 		if (debouncedFilters.category) {
@@ -106,8 +94,8 @@ const App = () => {
 				<FilterPanel
 					filters={filters}
 					setFilters={setFilters}
-					categories={categories}
-					brands={brands}
+					categories={CATEGORIES}
+					brands={BRANDS}
 				/>
 			)}
 

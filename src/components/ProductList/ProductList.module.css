@@ -3,9 +3,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  overflow-x: hidden;
 }
 
 .noProducts {
   font-size: 1.2em;
   color: #888;
+   text-align: center;
+  flex-grow: 1; /* Added to make it fill available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; 
 }
+

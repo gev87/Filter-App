@@ -1,0 +1,82 @@
+/* src/components/FilterPanel.module.css */
+
+
+.filterPanel {
+  background-color: var(--background-color);
+  border-right: 1px solid var(--border-color);
+  padding: 20px;
+  width: 250px;
+  min-width: 250px;
+  box-sizing: border-box;
+  height:100vh;
+  overflow-x: hidden;
+}
+
+.filterTitle {
+  font-size: 1.5em;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.filterLabel {
+  display: block;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 8px;
+}
+
+.filterSelect,
+.filterRange {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  color: var(--main-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+
+.filterSelect:focus,
+.filterRange:focus {
+  outline: none;
+  border-color: var(--brand-color);
+}
+
+.filterRange {
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--border-color);
+  margin-top: 10px;
+}
+
+.filterRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--brand-color);
+  cursor: pointer;
+}
+
+.filterRange::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand-color);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .filterPanel {
+    width: 95%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    height:auto
+  }
+}

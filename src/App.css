@@ -1,11 +1,11 @@
-/* src/App.css */
 :root {
-  --main-color: #333333;
-  --brand-color: #0066cc;
-  --secondary-color: #ff9900;
-  --background-color: #ffffff;
-  --border-color: #cccccc;
-  --muted-text-color: #666666;
+  --main-color: #333333;        /* Dark gray for text */
+  --brand-color: #0066cc;       /* Blue for brand accents */
+  --secondary-color: #ff9900;   /* Orange for secondary accents */
+  --background-color: #ffffff;  /* White background */
+  --border-color: #cccccc;      /* Light gray border */
+  --muted-text-color: #666666;  /* Medium gray for muted text */
   --hover-shadow: rgba(0, 0, 0, 0.1);
   --default-shadow: rgba(0, 0, 0, 0.05);
 }
+

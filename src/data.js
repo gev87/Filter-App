@@ -5,7 +5,7 @@ export const PRODUCTS = [
 		category: "Electronics",
 		brand: "Brand A",
 		price: 99.99,
-		rating: 4.5,
+		rating: 3.9,
 		imageUrl:
 			"https://images.unsplash.com/photo-1648447269269-f6f3c1635c55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
@@ -52,7 +52,6 @@ export const PRODUCTS = [
 ];
 
 
-	// Define initial filter values
 	export const INITIAL_FILTERS = {
 		category: "",
 		brand: "",
@@ -61,6 +60,5 @@ export const PRODUCTS = [
 		sortBy: "",
 	};
 
-	// Extract unique categories and brands from the product data
 	export const CATEGORIES = [...new Set(PRODUCTS.map((product) => product.category))];
 	export const BRANDS = [...new Set(PRODUCTS.map((product) => product.brand))];

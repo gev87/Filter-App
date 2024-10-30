@@ -1,4 +1,3 @@
-/* src/components/ProductCard.module.css */
 .productCard {
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
@@ -10,7 +9,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Added padding */
+  padding: 20px;
   height: fit-content;
 }
 
@@ -23,6 +22,7 @@
   width: 100%;
   height: 200px;
   object-fit: contain;
+  min-width: 250px;
 }
 
 .productName {
@@ -42,13 +42,13 @@
 }
 
 .productPrice {
-  color: var(--brand-color); /* Using brand color */
+  color: var(--brand-color);
   font-weight: 700;
   margin-top: auto;
 }
 
 .productRating {
-  color: var(--secondary-color); /* Using secondary color */
+  color: var(--secondary-color); 
 }
 
 .productPrice svg,
@@ -59,14 +59,14 @@
 
 @media (max-width: 800px) {
   .productCard {
-    margin-right: auto;
+    margin: auto;
   }
 }
 
 @media (max-width: 600px), (min-width: 801px) and (max-width: 888px) {
   .productCard {
     max-width: 100%;
-    margin-right: 36px;
+    margin-right: 46px;
   }
   .productCard img {
     height: auto;

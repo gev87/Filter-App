@@ -1,12 +1,10 @@
-/* src/components/Spinner.module.css */
-/* src/components/Spinner.module.css */
-.spinnerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1; /* Added to allow the spinner to fill available space */
-  min-height: 400px; /* Ensure spinner container maintains height */
-  align-self: center;
-  width:100%
-}
 
+.spinnerContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1; 
+	min-height: 400px; 
+	align-self: center;
+	width: 100%;
+}

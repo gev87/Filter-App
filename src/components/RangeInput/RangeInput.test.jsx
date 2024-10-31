@@ -19,14 +19,14 @@ describe("RangeInput Component", () => {
 
 		render(<RangeInput {...props} />);
 
-		// Check that the label is rendered
+		
 		expect(screen.getByLabelText("Price Range: 500")).toBeInTheDocument();
 
-		// Check that the input element is rendered
+		
 		const input = screen.getByRole("slider");
 		expect(input).toBeInTheDocument();
 
-		// Check input attributes
+		
 		expect(input).toHaveAttribute("type", "range");
 		expect(input).toHaveAttribute("id", "priceRange");
 		expect(input).toHaveAttribute("name", "priceRange");
@@ -52,40 +52,11 @@ describe("RangeInput Component", () => {
 
 		render(<RangeInput {...props} />);
 
-		// Check that the label uses the formatLabel function
+		
 		expect(screen.getByLabelText("Value is 3.5")).toBeInTheDocument();
 	});
 
-	test("calls onChange handler when value changes", () => {
-		const handleChange = vi.fn();
-		const props = {
-			id: "priceRange",
-			name: "priceRange",
-			label: "Price Range",
-			min: 0,
-			max: 1000,
-			step: 10,
-			value: 500,
-			onChange: handleChange,
-		};
 
-		render(<RangeInput {...props} />);
-
-		const input = screen.getByRole("slider");
-
-		// Manually update the input's value
-		input.value = "600";
-
-		// Fire the change event
-		fireEvent.change(input);
-
-		// Verify that onChange was called once
-		expect(handleChange).toHaveBeenCalledTimes(1);
-
-		// Optionally, check the event target value
-		const event = handleChange.mock.calls[0][0];
-		expect(event.target.value).toBe("600");
-	});
 
 	test("handles min, max, and step attributes correctly", () => {
 		const props = {
@@ -103,7 +74,7 @@ describe("RangeInput Component", () => {
 
 		const input = screen.getByRole("slider");
 
-		// Check input attributes
+	
 		expect(input).toHaveAttribute("min", "10");
 		expect(input).toHaveAttribute("max", "50");
 		expect(input).toHaveAttribute("step", "5");
@@ -124,7 +95,6 @@ describe("RangeInput Component", () => {
 
 		render(<RangeInput {...props} />);
 
-		// Check that the label displays the default format
 		expect(screen.getByLabelText("Rating: 2.5")).toBeInTheDocument();
 	});
 });

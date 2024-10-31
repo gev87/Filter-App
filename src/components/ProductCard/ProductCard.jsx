@@ -6,7 +6,7 @@ import { FaDollarSign, FaStar } from "react-icons/fa";
 const ProductCard = ({ name, category, brand, price, rating, imageUrl }) => {
 
 	return (
-		<div className={classes.productCard}>
+		<div className={classes.productCard} data-testid="product-card">
 			<img src={imageUrl} alt={`${name} by ${brand}`} className={classes.productImage} />
 			<div className={classes.productDetails}>
 				<h3 className={classes.productName}>{name}</h3>

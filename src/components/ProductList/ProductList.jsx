@@ -7,7 +7,7 @@ const ProductList = ({ products }) => {
 			{products.length > 0 ? (
 				products.map((product) => <ProductCard key={product.id} {...product} />)
 			) : (
-				<h1 className={classes.noProducts}>No products found !</h1>
+				<h1 className={classes.noProducts}>No products found</h1>
 			)}
 		</div>
 	);
